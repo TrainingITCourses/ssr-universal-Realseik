@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "deteccion-del-cambio-Realseik": {
+    "deteccionDelCambioRealseik": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/deteccion-del-cambio-Realseik",
+            "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "deteccion-del-cambio-Realseik:build"
+            "browserTarget": "deteccionDelCambioRealseik:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "deteccion-del-cambio-Realseik:build:production"
+              "browserTarget": "deteccionDelCambioRealseik:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "deteccion-del-cambio-Realseik:build"
+            "browserTarget": "deteccionDelCambioRealseik:build"
           }
         },
         "test": {
@@ -92,10 +92,18 @@
               "**/node_modules/**"
             ]
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json"
+          }
         }
       }
     },
-    "deteccion-del-cambio-Realseik-e2e": {
+    "deteccionDelCambioRealseik-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +111,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "deteccion-del-cambio-Realseik:serve"
+            "devServerTarget": "deteccionDelCambioRealseik:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "deteccion-del-cambio-Realseik:serve:production"
+              "devServerTarget": "deteccionDelCambioRealseik:serve:production"
             }
           }
         },
@@ -123,5 +131,5 @@
       }
     }
   },
-  "defaultProject": "deteccion-del-cambio-Realseik"
+  "defaultProject": "deteccionDelCambioRealseik"
 }

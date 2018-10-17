@@ -19,7 +19,7 @@ import { ContainerComponent } from './container/container.component';
     ContainerComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
   ],
   providers: [DataService],
